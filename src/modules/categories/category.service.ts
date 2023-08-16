@@ -72,11 +72,12 @@ const updateCategoryService = async (data: Category) => {
 };
 
 const deleteCategoryService = async (id: any) => {
+  
   const result = await prisma.category.delete({
-    where: {
-      id: id,
-    },
-  });
+    where:{
+      id:parseInt(id)
+    }
+  })
 
   return result;
 };

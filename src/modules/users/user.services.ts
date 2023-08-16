@@ -79,7 +79,7 @@ const updateUserService = async (body:any) => {
 const deleteUserService = async (id: any) => {
   const result = await prisma.user.delete({
     where: {
-      id: id,
+      id: parseInt(id),
     },
   });
 
